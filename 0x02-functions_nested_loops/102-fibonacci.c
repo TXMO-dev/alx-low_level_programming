@@ -19,5 +19,6 @@ num2 = next_num;
 count++;
 }
 putchar('\n');
+putchar('\n');
 return (0);
 }
