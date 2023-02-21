@@ -6,16 +6,18 @@
 */
 int main(void)
 {
-int n, t1 = 1, t2 = 2, next_term;
-printf("%d, %d", t1, t2);
-for (n = 3; n <= 50; n++)
+int num1 = 1, num2 = 2, next_num;
+int count = 0;
+printf("%d, %d", num1, num2);
+count = 2;
+while (count < 50)
 {
-next_term = t1 + t2;
-printf(", %d", next_term);
-t1 = t2;
-t2 = next_term;
+next_num = num1 + num2;
+printf(", %d", next_num);
+num1 = num2;
+num2 = next_num;
+count++;
 }
-printf("\n");
+putchar('\n');
 return (0);
 }
-
