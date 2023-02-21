@@ -6,14 +6,14 @@
 */
 int main(void)
 {
-int current = 1, previous = 1, sum = 0;
+int current = 1, previous = 1, sum = 0, next=0;
 while (current <= 4000000)
 {
 if (current % 2 == 0)
 {
 sum += current;
 }
-int next = current + previous;
+next = cuirrent + previous;
 previous = current;
 current = next;
 }
