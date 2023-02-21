@@ -39,7 +39,7 @@ _putchar((res / 100) + '0');
 _putchar(((res / 10) % 10) + '0');
 _putchar((res % 10) + '0');
 }
-if (j < n) 
+if (j < n)
 {
 _putchar(',');
 _putchar(' ');
