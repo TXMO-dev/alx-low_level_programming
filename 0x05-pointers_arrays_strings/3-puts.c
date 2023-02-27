@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
 * _puts - Prints a string to the standard output followed by a new line.
 *
