@@ -7,17 +7,18 @@
 */
 char *leet(char *str)
 {
+char *letters = "AEOTLaeotl";
+char *leet_codes = "43071";
 int i, j;
-char leet_map[256] = {0};
-for (i = 0; "aAeEoOtTlL"[i]; i++)
-{
-leet_map["aAeEoOtTlL"[i]] = "44337011"[i];
-}
 for (i = 0; str[i] != '\0'; i++)
 {
-if (leet_map[str[i]])
+for (j = 0; letters[j] != '\0'; j++)
 {
-str[i] = leet_map[str[i]];
+if (str[i] == letters[j])
+{
+str[i] = leet_codes[j / 5] + (j % 5);
+break;
+}
 }
 }
 return (str);
