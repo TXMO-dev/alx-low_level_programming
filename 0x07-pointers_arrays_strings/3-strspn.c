@@ -19,7 +19,7 @@ p++;
 }
 if (!*p)
 {
-return count;
+return (count);
 }
 count++;
 s++;
