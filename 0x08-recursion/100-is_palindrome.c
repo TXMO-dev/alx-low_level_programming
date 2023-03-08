@@ -1,21 +1,19 @@
 /**
-* is_palindrome - checks if a string is a palindrome
-* @s: the string to check
+* is_palindrome - Check if a string is a palindrome
 *
-* Return: 1 if s is a palindrome, 0 otherwise
+* @s: Pointer to the string to check
+*
+* Return: 1 if the string is a palindrome, 0 otherwise
 */
 int is_palindrome(char *s)
 {
-int len;
-if (*s == '\0')
+if (*s == '\0' || *(s + 1) == '\0')
 {
 return (1);
 }
-len = strlen(s) - 1;
-if (*s != s[len])
+if (*s == *(s + strlen(s) - 1))
 {
-return (0);
+return (is_palindrome(s + 1) * 1);
 }
-s[len] = '\0';
-return (is_palindrome(s + 1));
+return (0);
 }
