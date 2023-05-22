@@ -1,3 +1,12 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -shared -o liball.so *.c
 
+# Compile each .c file into corresponding .o file
+for file in *.c; do
+    gcc -c -Wall -Werror -fpic "$file" -o "${file%.c}.o"
+done
+
+# Create the dynamic library
+gcc -shared -o liball.so *.o
+
+# Cleanup: remove the intermediate .o files
+rm *.o
